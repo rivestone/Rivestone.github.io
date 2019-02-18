@@ -1,0 +1,32 @@
+.sign-in-btn{
+  padding: 8px 20px;
+  border: 1px solid $sign-in-border;
+  border-radius: 4px;
+  color: $white-color;
+  text-align: center;
+  cursor: pointer;
+  span, img{
+    vertical-align: middle;
+  }
+  span{
+    margin-left: 3.5px;
+    font-family: OpenSans-Bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+.user-form__submit{
+  &__submit{
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 4px;
+    background-color: $green-color;
+    color: $white-color;
+    font-family: OpenSans-Bold;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($green-color, 10%)
+    }
+  }
+}

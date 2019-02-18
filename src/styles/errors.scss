@@ -1,0 +1,45 @@
+%error{
+  background-color: $red-error;
+  color: $white-color;
+  border-radius: 4px;
+  @extend %big-font-settings;
+  text-align: center;
+}
+.bottom-error{
+  @extend %error;
+  position: relative;
+  margin-bottom: 16px;
+  padding: 8px 24px 8px 64px;
+  text-align: left;
+  &:before{
+    content:'';
+    position: absolute;
+    left: 24px;
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url('../img/attention.png');
+    height: 17px;
+    width: 17px;
+  }
+}
+.popup-error{
+  @extend %error;
+  position: absolute;
+  bottom: 77px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  &:after{
+    content:'';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-width: 9px 8px 0 8px;;
+    border-color: $red-error transparent transparent transparent;
+    border-style: solid;
+  }
+  span{
+    display: block;
+  }
+}

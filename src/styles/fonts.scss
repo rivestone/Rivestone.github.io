@@ -1,0 +1,9 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url(../fonts/opensans-bold.woff)format("woff"),
+  url(../fonts/opensans-bold.ttf)format("ttf"),
+  url(../fonts/opensans-bold.eot)format("eot");
+}

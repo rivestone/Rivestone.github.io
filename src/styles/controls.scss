@@ -1,0 +1,118 @@
+.user-form__field{
+  position: relative;
+  input:focus ~ span,
+  span.not-empty{
+    top: 12px;
+    left: 24px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  span {
+    position: absolute;
+    pointer-events: none;
+    top: 20px;
+    left: 24px;
+    transition: 0.2s ease all;
+    letter-spacing: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.choose-currency__panel{
+  flex: 1;
+  display: inline-flex;
+  width: 250px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 4px;
+  line-height: 32px;
+  .custom-radio-btn{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    &:hover input ~ .checkmark {
+      background-color: $green-color;
+      border-color: $green-color;
+      &:after{
+        display: none;
+      }
+    }
+    &:nth-child(1){
+      .checkmark{
+        border-radius: 4px 0 0 4px;
+          &:after{
+            display: none;
+          }
+      }
+    }
+    &:nth-child(3){
+      .checkmark{
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    .checkmark{
+      position: relative;
+      box-sizing: border-box;
+      height: 100%;
+      background-color: $grey-background;
+      border: 1px solid $grey-background;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 1px;
+        height: 26px;
+        background-color: $currencypanel-lines;
+      }
+    }
+    input {
+      display: none;
+      &:checked ~ .checkmark {
+        background-color: $common-background;
+        border-color: $green-color;
+      }
+    }
+  }
+}
+.custom-checkbox{
+  display: block;
+  position: relative;
+  @extend %normal-font-settings;
+  cursor: pointer;
+  &:hover{
+    span{
+      background-color: lighten($grey-background, 10%);
+    }
+  }
+  input{
+    display: none;
+    &:checked ~ span {
+      &:after{
+        display: block;
+      }
+    }
+  }
+  span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 32px;
+    width: 32px;
+    background-color: $grey-background;
+    border-radius: 4px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      background-image: url(../img/check.png);
+      left: 7px;
+      top: 9px;
+      width: 18px;
+      height: 14px;
+    }
+  }
+  div{
+    padding-left: 46px;
+  }
+}

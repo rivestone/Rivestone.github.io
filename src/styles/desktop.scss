@@ -1,0 +1,83 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @media (min-width: 950px) {
+    .start-trade{
+      &__form{
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        -ms-grid-row: 2;
+      }
+      &__devices-onthe-background{
+        -ms-grid-column: 2;
+        -ms-grid-row: 2;
+        margin-left: 8%;
+     }
+    }
+  }
+  @media (max-width: 950px){
+    .start-trade{
+      -ms-max-width: none;
+      width: 440px;
+    }
+  }
+}
+@media (min-width: 950px) {
+  .start-trade{
+    margin: 0;
+    &__wrapper{
+      grid-template-areas: "logo login"
+                           "form img";
+      padding: 0 45px 0 100px;
+    }
+    &__devices-onthe-background{
+      position: relative;
+      .devices-onthe-background__inner{
+        position: relative;
+      }
+      .phone{
+        display: block;
+        width: 245px;
+        height: 482px;
+        position: absolute;
+        bottom: 0;
+        background-image: url(../img/frontal-black.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+      .tablet{
+        display: block;
+        height: 613px;
+        width: 100%;
+        top: 0;
+        right: -45px;
+        margin: 16px 0 0 35px;
+        padding-right: 10px;
+        background-image: url(../img/dark.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+@media (min-width: 1500px){
+  .start-trade{
+    &__devices-onthe-background{
+      .tablet{
+        background-size: contain;
+        background-position: right;
+      }
+      .phone{
+        left: 10%;
+      }
+    }
+  }
+}
+@media (min-width: 1900px){
+  .start-trade{
+    &__devices-onthe-background{
+      .phone{
+        left: 20%;
+      }
+    }
+  }
+}

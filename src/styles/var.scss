@@ -1,0 +1,20 @@
+$common-background: #0b172a;
+$green-color: #1C945D;
+$white-color: #fff;
+$grey-background: #212d3e;
+$grey-text: #7A8F99;
+$red-error: #E15433;
+$currencypanel-lines: #1a2738;
+$sign-in-border: #D8E1E6;
+
+%big-font-settings{
+  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%normal-font-settings{
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+}
